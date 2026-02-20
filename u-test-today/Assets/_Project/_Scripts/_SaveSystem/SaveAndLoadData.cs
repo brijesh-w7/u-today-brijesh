@@ -11,7 +11,7 @@ public class SaveAndLoadData : SingletonMono<SaveAndLoadData>
     void Start()
     {
         if (HasJson())
-        {
+        { 
             LoadJson();
             if (json.HasWon()) ClearJson();
         }
@@ -22,7 +22,7 @@ public class SaveAndLoadData : SingletonMono<SaveAndLoadData>
     private void SaveJson()
     {
         PlayerPrefs.SetString(key, JsonConvert.SerializeObject(json));
-        Debug.Log("SaveData: " + JsonConvert.SerializeObject(json));
+        //Debug.Log("SaveData: " + JsonConvert.SerializeObject(json));
     }
     public void ClearJson()
     {
