@@ -43,7 +43,7 @@ public class MainMenuUI : MonoParent
         isStartingGamePlay = true;
         Vector2Int gameSize = GetGameSize();
         UIController.Instance.ShowGamePlayScreen();
-        GameManager.Instance.StartCardGame(gameSize);
+        GameManager.Instance.StartGame(gameSize);
 
         CallAfterSeconds(.1f, UIController.Instance.HideMainMenuScreen);
 

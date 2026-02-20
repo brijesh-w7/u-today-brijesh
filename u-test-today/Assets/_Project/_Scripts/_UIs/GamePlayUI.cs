@@ -68,6 +68,7 @@ public class GamePlayUI : MonoParent
     void OnClickedHomeButton()
     {
         AudioHandler.Instance.PlayButtonClickedAudio();
+        UIController.Instance.Popup.gameObject.SetActive(true);
         UIController.Instance.Popup.Show("Are you sure quit the game,\n The progress will be lost.", (state) =>
         {
             UIController.Instance.Popup.Close();

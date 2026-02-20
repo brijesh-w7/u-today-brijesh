@@ -51,7 +51,7 @@ public class GameManager : SingletonMono<GameManager>
         cardsContainer.SetActive(false);
     }
 
-    public void StartCardGame(Vector2Int gameSize)
+    public void StartGame(Vector2Int gameSize)
     {
         if (gameStart) return; // return if game already running
         
@@ -104,7 +104,7 @@ public class GameManager : SingletonMono<GameManager>
 
     IEnumerator HideFace()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1);
         for (int i = 0; i < cards.Length; i++)
             cards[i].Flip();
         AudioHandler.Instance.PlayAudioClip(AudioHandler.Instance.clipCardFlip);
